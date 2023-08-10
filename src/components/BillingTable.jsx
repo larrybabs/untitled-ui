@@ -76,7 +76,7 @@ const BillingTable = () => {
             <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
               <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                 <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50 font-medium text-xs text-left text-secondary tracking-wider">
+                  <thead className="bg-gray-50 whitespace-nowrap font-medium text-xs text-left text-secondary tracking-wider">
                     <tr>
                       {tableHeaders.map((header, idx) => {
                         if (header === "Invoice") {
@@ -103,7 +103,7 @@ const BillingTable = () => {
                   <tbody className="bg-white divide-y divide-gray-200 text-secondary">
                     {Billings.map((bill, Idx) => (
                       <tr key={Idx}>
-                        <td className="pl-6 py-4 sm:pr-60 whitespace-nowrap text-sm font-medium text-primary">
+                        <td className="pl-6 py-4 pr-20 sm:pr-60 whitespace-nowrap text-sm font-medium text-primary">
                           <input
                             type="checkbox"
                             name={`student${Idx}`}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Sidenav from "../components/Sidenav";
+import Navbar from "../components/Navbar";
 import RadioButtonGroup from "../components/RadioButton";
 import CardSelection from "../components/CardSelection";
 import BillingTable from "../components/BillingTable";
 
 const Settings = () => {
   const [active, setActive] = useState("Billing");
+
   const buttons = [
     "My details",
     "Profile",
@@ -20,33 +21,35 @@ const Settings = () => {
 
   return (
     <div className="flex">
-      <aside className="w-full sm:w-72  h-screen fixed z-10">
-        <Sidenav />
+      <aside className="">
+        <Navbar />
       </aside>
 
-      <main className="bg-[#F9FAFB] mt-24 sm:mt-0 sm:ml-72 w-full h-full sm:p-8">
+      <main className="bg-[#F9FAFB] pt-28 sm:pt-8 sm:ml-72 w-full h-full sm:p-8">
         <div className="px-4 sm:px-0">
-        <h1 className="font-medium text-3xl text-dark">Settings</h1>
-        <p className="text-secondary mt-1">
-          Manage your team and preferences here.
-        </p>
+          <h1 className="font-medium text-3xl text-dark">Settings</h1>
+          <p className="text-secondary mt-1">
+            Manage your team and preferences here.
+          </p>
         </div>
 
-        <div className="flex mt-6 overflow-x-scroll ">
-          {buttons.map((button, idx) => (
-            <button
-              key={button}
-              className={`border py-2 px-4 text-sm ${
-                active === button
-                  ? "bg-[#F9FAFB] text-dark"
-                  : "bg-white text-primary"
-              }  ${idx === 0 ? "rounded-l-lg" : ""}
+        <div className="flex">
+          <div className="overflow-x-scroll whitespace-nowrap w-ful py-4">
+            {buttons.map((button, idx) => (
+              <button
+                key={button}
+                className={`border py-2 px-4 text-sm ${
+                  active === button
+                    ? "bg-[#F9FAFB] text-dark"
+                    : "bg-white text-primary"
+                }  ${idx === 0 ? "rounded-l-lg" : ""}
               ${idx === buttons.length - 1 ? "rounded-r-lg" : ""}`}
-              onClick={() => setActive(button)}
-            >
-              {button}
-            </button>
-          ))}
+                onClick={() => setActive(button)}
+              >
+                {button}
+              </button>
+            ))}
+          </div>
         </div>
 
         <section className="my-8 px-4 sm:px-0">
