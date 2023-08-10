@@ -103,7 +103,7 @@ const BillingTable = () => {
                   <tbody className="bg-white divide-y divide-gray-200 text-secondary">
                     {Billings.map((bill, Idx) => (
                       <tr key={Idx}>
-                        <td className="pl-6 py-4 pr-20 sm:pr-60 whitespace-nowrap text-sm font-medium text-primary">
+                        <td className="pl-6 py-4 pr-16 sm:pr-60 whitespace-nowrap text-sm font-medium text-primary">
                           <input
                             type="checkbox"
                             name={`student${Idx}`}

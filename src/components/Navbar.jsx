@@ -154,7 +154,7 @@ const Navbar = () => {
             <input
               type="search"
               placeholder="Search"
-              className="border py-2 pl-10 pr-4 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border py-2 pl-10 pr-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
@@ -164,7 +164,7 @@ const Navbar = () => {
                 <li key={item.name} onClick={() => setActiveTab(item.name)}>
                   <div
                     className={`flex justify-between py-2 px-3 ${
-                      item.name === "support" ? "mt-44" : ""
+                      item.name === "support" ? "mt-36" : ""
                     } ${
                       activeTab === item.name ? "bg-[#F9FAFB] rounded-lg" : ""
                     }`}
