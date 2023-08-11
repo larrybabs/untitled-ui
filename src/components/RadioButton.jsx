@@ -43,7 +43,7 @@ const RadioButtonGroup = () => {
               <input
                 type="text"
                 placeholder="billing@untitledui.com"
-                className="border py-2 pl-10 pr-4 w-full sm:w-96 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="border py-2 pl-10 pr-4 w-full sm:w-4/5 md:w-2/3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
           </span>
