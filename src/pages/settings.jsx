@@ -25,7 +25,7 @@ const Settings = () => {
         <Navbar />
       </aside>
 
-      <main className="bg-[#F9FAFB] pt-28 sm:pt-8 sm:ml-72 w-full h-full sm:p-8">
+      <main className="bg-[#F9FAFB] pt-28 sm:pt-24 md:pt-8 md:pl-80 w-full h-full sm:p-8">
         <div className="px-4 sm:px-0">
           <h1 className="font-medium text-3xl text-dark">Settings</h1>
           <p className="text-secondary mt-1">

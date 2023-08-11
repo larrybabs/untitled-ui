@@ -126,12 +126,12 @@ const BillingTable = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap flex -space-x-2">
                           {bill.users.slice(0, 5).map((img, idx) => (
-                            <td
+                            <span
                               key={idx}
                               className="rounded-full border-1 border-white"
                             >
                               <img src={img} alt="" width={24} />
-                            </td>
+                            </span>
                           ))}
                           {bill.users.length > 5 ? (
                             <span className="rounded-full border-1 border-white bg-gray-100 w-6 h-6 m-auto pt-1 text-center item text-xs font-medium">

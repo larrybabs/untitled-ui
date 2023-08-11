@@ -46,7 +46,7 @@ const Navbar = () => {
 
       {/* Desktop sidebar */}
 
-      <div className="overflow-y-scroll h-full w-72 fixed hidden sm:block">
+      <div className="overflow-y-scroll h-full w-72 fixed hidden md:block">
         <div className="container px-4 py-8 border bg-white">
           <div className="items-center hidden sm:flex">
             <img src={Logo} alt="logo" />
@@ -126,7 +126,7 @@ const Navbar = () => {
 
       {/* mobile nav*/}
 
-      <div className="items-center justify-between p-4 bg-white flex sm:hidden w-full fixed z-20">
+      <div className="items-center justify-between p-4 bg-white flex md:hidden w-full fixed z-20">
         <div className="items-center flex w-full">
           <img src={Logo} alt="logo" />
           <p className="pl-2 text-xl">Untitled UI</p>
@@ -141,7 +141,7 @@ const Navbar = () => {
         className={
           !isOpen
             ? "hidden"
-            : "fixed bg-dark bg-opacity-25 w-full h-full shadow-md flex flex-col z-10 sm:hidden"
+            : "fixed bg-dark bg-opacity-25 w-full h-full shadow-md flex flex-col z-10 md:hidden"
         }
         
       >
@@ -164,7 +164,7 @@ const Navbar = () => {
                 <li key={item.name} onClick={() => setActiveTab(item.name)}>
                   <div
                     className={`flex justify-between py-2 px-3 ${
-                      item.name === "support" ? "mt-36" : ""
+                      item.name === "support" ? "mt-20" : ""
                     } ${
                       activeTab === item.name ? "bg-[#F9FAFB] rounded-lg" : ""
                     }`}
@@ -197,7 +197,7 @@ const Navbar = () => {
               <p className="text-secondary">olivia@untitledui.com</p>
             </div>
             <a href="/">
-              <LuLogOut />
+              <LuLogOut size={24}/>
             </a>
           </div>
         </div>
