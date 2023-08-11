@@ -61,6 +61,14 @@ const BillingTable = () => {
 
   const tableHeaders = ["Invoice", "Amount", "Date", "Status", "Users on plan"];
 
+  const toggleCheckboxes = (event) => {
+    const isChecked = event.target.checked;
+    const checkboxes = document.querySelectorAll(".check-item");
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = isChecked;
+    });
+  };
+
   return (
     <>
       <div className="sm:flex justify-between items-center">
@@ -86,7 +94,7 @@ const BillingTable = () => {
                               scope="col"
                               className="px-6 py-4 flex items-center"
                             >
-                              <input type="checkbox" className="mr-2" />
+                              <input id="check-all" type="checkbox" className="mr-2" onClick={toggleCheckboxes}/>
                               {header}{" "}
                               <LuArrowDown size={14} className="ml-1" />
                             </th>
@@ -106,9 +114,9 @@ const BillingTable = () => {
                         <td className="pl-6 py-4 pr-16 sm:pr-60 whitespace-nowrap text-sm font-medium text-primary">
                           <input
                             type="checkbox"
-                            name={`student${Idx}`}
-                            id={`student${Idx}`}
-                            className="mr-2"
+                            name={`bills${Idx}`}
+                            id={`bills${Idx}`}
+                            className="mr-2 check-item"
                           />
                           {bill.invoice}
                         </td>
