@@ -141,10 +141,13 @@ const Navbar = () => {
         className={
           !isOpen
             ? "hidden"
-            : "fixed bg-dark bg-opacity-25 w-full h-full shadow-md flex flex-col z-10 md:hidden"
+            : "fixed  w-full h-full shadow-md flex flex-col z-10 md:hidden"
         }
         
+        
       >
+        <div className="absolute bg-dark bg-opacity-25 w-full h-full -z-20" onClick={handleClick} ></div>
+
         <div className="container px-4 py-8 h-screen border bg-white w-3/4">
           <div className="mb-4 mx-2 mt-16 relative">
             <LuSearch
@@ -168,6 +171,7 @@ const Navbar = () => {
                     } ${
                       activeTab === item.name ? "bg-[#F9FAFB] rounded-lg" : ""
                     }`}
+                    onClick={handleClick}
                   >
                     <div>
                       <span className="h-5 inline-block mr-3 text-gray-500">
@@ -175,13 +179,13 @@ const Navbar = () => {
                       </span>
                       <a href={item.link}>{item.name}</a>
                     </div>
-                    {item.badge ? (
+                    {item.badge ? 
                       <p className="bg-[#F2F4F7] text-xs px-3 py-1 rounded-2xl">
                         {item.badge}
                       </p>
-                    ) : (
+                    : 
                       ""
-                    )}
+                    }
                   </div>
                 </li>
               ))}
